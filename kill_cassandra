@@ -1,0 +1,8 @@
+#!/bin/bash
+for x in 02 03 04 05 07 08 09 10 11
+do
+    ssh sys$x pkill java 
+    ssh sys$x rm -rf /tmp/cassandra
+done
+pkill java
+rm -rf /tmp/cassandra
